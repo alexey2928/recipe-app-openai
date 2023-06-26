@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Ysabeau+Office:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;1,1;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+.col-carousel {
+	display: flex;
+	justify-content: center;
+	font-family: "Ysabeau Office", sans-serif;
+}
+.title {
+	font-family: "Dancing Script", cursive;
+	color: whitesmoke;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.body-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.title-card {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+}
+
+.recipe-image {
+	width: 100%;
+	height: 256px;
+	object-fit: cover;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.nav-main {
+	display: flex;
+	font-size: 12px;
+	border-bottom: solid 0.5px;
+	justify-content: space-around;
+}
+
+.card-main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-main li {
+	list-style-type: none;
+}
+
+.card-left {
+	border-right: solid 0.5px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-right {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-bottom {
+	margin: 10px;
+	padding: 5px;
+	border: solid 0.5px;
+	border-radius: 5px;
+}
+
+.input-container {
+	position: relative;
+	width: 100%;
+	max-width: 650px;
+}
+
+.btn-submit {
+	position: absolute;
+	bottom: 15px;
+	right: 0;
+	cursor: pointer;
+}
+
+.main-input {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 50px;
+	font-family: "Ysabeau Office", sans-serif;
+}
+
+input {
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.05);
+	padding: 15px 5px;
+	font-size: 25px;
+}
+
+input:focus {
+	outline: none;
+}
+
+input::placeholder {
+	color: whitesmoke;
+	opacity: 0.5;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-family: "Ysabeau Office", sans-serif;
+	background-color: black;
+	opacity: 0.5;
+	color: whitesmoke;
+	height: 80px;
+}
+
+.footer-info {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-links a {
+	margin-left: 5px;
+}
+.footer-p {
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 576px) {
+	.form-input::placeholder {
+		color: transparent;
+	}
 }
