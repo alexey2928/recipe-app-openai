@@ -36,20 +36,23 @@ function App() {
 		};
 		try {
 			const response = await fetch(
-				"http://localhost:5000/api/chatgpt",
+				"https://recipe-app-server-omega.vercel.app/api/chatgpt",
 				options
 			);
 			const data = await response.json();
 			setMessages(data);
-			const imgResponse = await fetch("http://localhost:5000/api/image", {
-				method: "POST",
-				body: JSON.stringify({
-					dish_name: data.map((dish) => dish.dish_name),
-				}),
-				headers: {
-					"Content-Type": "application/json",
-				},
-			});
+			const imgResponse = await fetch(
+				"https://recipe-app-server-omega.vercel.app/api/image",
+				{
+					method: "POST",
+					body: JSON.stringify({
+						dish_name: data.map((dish) => dish.dish_name),
+					}),
+					headers: {
+						"Content-Type": "application/json",
+					},
+				}
+			);
 			const imgData = await imgResponse.json();
 			setImages(imgData);
 			setIsLoading(false);
